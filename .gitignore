@@ -1,0 +1,13 @@
+# System & Cache
+.DS_Store
+Thumbs.db
+*.log
+
+# Editor & IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Vercel deployment folder
+.vercel/

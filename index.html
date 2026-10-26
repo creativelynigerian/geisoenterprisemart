@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GEISO ENTERPRISE &ndash; The Place of Exquisite Fashion</title>
+  
+  <!-- Meta & SEO -->
+  <meta name="description" content="Discover exquisite African couture, bespoke Senator attires, luxury Bubu gowns, and handcrafted braided wigs at Geiso Enterprise." />
+  <meta name="keywords" content="African fashion, braided wigs, Senator style, Bubu dresses, African male native attire, lace frontal, Geiso Enterprise" />
+  <meta name="author" content="CCYI GLOBAL ENTERPRISE" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="GEISO ENTERPRISE &ndash; The Place of Exquisite Fashion" />
+  <meta property="og:description" content="Authentic African royal wear, contemporary Senator styles, and handcrafted braided wigs." />
+  <meta property="og:image" content="https://geisoenterprise.co.uk/wp-content/uploads/2024/07/FAVICON.png" />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://geisoenterprise.co.uk/wp-content/uploads/2024/07/cropped-FAVICON-32x32.png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="https://geisoenterprise.co.uk/wp-content/uploads/2024/07/cropped-FAVICON-180x180.png" />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="container">
+      <div class="announcement-text">
+        <i class="bi bi-stars"></i> <span>SPECIAL OFFER:</span> Get <strong>10 - 15% OFF</strong> on your first order! Use code: <strong>GEISO15</strong> | Free UK Express Delivery over &pound;100
+      </div>
+      <div class="announcement-links">
+        <a href="https://webmail.geisoenterprise.co.uk" target="_blank" class="announcement-link">
+          <i class="bi bi-envelope-at"></i> GEISOMAIL
+        </a>
+        <a href="#about" class="announcement-link">
+          <i class="bi bi-patch-check"></i> Authentic Guarantee
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Header Navigation -->
+  <header class="site-header" id="masthead">
+    <div class="container header-inner">
+      <!-- Brand Logo -->
+      <a href="#" class="brand-logo" aria-label="GEISO ENTERPRISE Home">
+        <img src="https://geisoenterprise.co.uk/wp-content/uploads/2024/07/FAVICON-150x106.png" alt="GEISO ENTERPRISE Logo" />
+        <div class="brand-text-wrap">
+          <span class="brand-title">GEISO ENTERPRISE</span>
+          <span class="brand-tagline">Exquisite Fashion</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <a href="#" class="nav-link active">Home</a>
+        <a href="#collections" class="nav-link">Collections</a>
+        <a href="#lookbook" class="nav-link">Lookbook</a>
+        <a href="#about" class="nav-link">About Us</a>
+        <a href="#reviews" class="nav-link">Reviews</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="header-actions">
+        <!-- Wishlist -->
+        <button class="action-btn" title="Saved Wishlist" onclick="window.location.href='#collections'" aria-label="Wishlist">
+          <i class="bi bi-heart"></i>
+          <span class="badge-count" id="wishlistCountBadge" style="position: absolute; top: -4px; right: -4px; font-size: 0.7rem; width: 18px; height: 18px;">0</span>
+        </button>
+
+        <!-- Cart Pill Button -->
+        <button class="cart-btn-pill" onclick="openCartDrawer()" aria-label="Shopping Bag">
+          <i class="bi bi-bag"></i>
+          <span class="badge-count" id="headerCartCount">0</span>
+          <span class="cart-total-header" id="headerCartTotal">&pound;0.00</span>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="action-btn mobile-toggle" id="mobileNavToggle" aria-label="Open Mobile Menu">
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Off-Canvas Navigation Drawer -->
+  <div class="drawer-backdrop" id="mobileBackdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobileNavDrawer" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo">
+        <img src="https://geisoenterprise.co.uk/wp-content/uploads/2024/07/FAVICON-150x106.png" alt="GEISO Logo" style="height: 38px;" />
+        <span class="brand-title" style="font-size: 1.1rem;">GEISO</span>
+      </div>
+      <button class="close-drawer-btn" id="closeMobileNav" aria-label="Close Mobile Menu">
+        <i class="bi bi-x-lg"></i>
+      </button>
+    </div>
+
+    <div class="mobile-nav-links">
+      <a href="#" class="mobile-nav-link active"><span>Home</span> <i class="bi bi-chevron-right"></i></a>
+      <a href="#collections" class="mobile-nav-link"><span>Collections & Shop</span> <i class="bi bi-chevron-right"></i></a>
+      <a href="#lookbook" class="mobile-nav-link"><span>Runway Lookbook</span> <i class="bi bi-chevron-right"></i></a>
+      <a href="#about" class="mobile-nav-link"><span>About Brand</span> <i class="bi bi-chevron-right"></i></a>
+      <a href="#reviews" class="mobile-nav-link"><span>Customer Reviews</span> <i class="bi bi-chevron-right"></i></a>
+      <a href="#contact" class="mobile-nav-link"><span>Contact & Orders</span> <i class="bi bi-chevron-right"></i></a>
+      <a href="https://webmail.geisoenterprise.co.uk" target="_blank" class="mobile-nav-link"><span>GEISOMAIL</span> <i class="bi bi-box-arrow-up-right"></i></a>
+    </div>
+
+    <div class="mobile-drawer-footer">
+      <div class="drawer-contact-item">
+        <i class="bi bi-geo-alt-fill"></i>
+        <span>United Kingdom Delivery & Worldwide</span>
+      </div>
+      <div class="drawer-contact-item">
+        <i class="bi bi-whatsapp"></i>
+        <span>+44 7404 123456</span>
+      </div>
+      <button class="btn-primary" style="width: 100%; margin-top: 12px;" onclick="closeMobileNav.click(); openCartDrawer();">
+        <i class="bi bi-bag"></i> View Shopping Cart
+      </button>
+    </div>
+  </aside>
+
+  <!-- Main Hero Section -->
+  <section class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge" id="heroBadge">
+          <i class="bi bi-patch-check-fill"></i> New Season 2026
+        </div>
+        <h1 class="hero-title" id="heroTitle">
+          The Place of <span>Exquisite</span> Fashion
+        </h1>
+        <p class="hero-subtitle" id="heroSubtitle">
+          Luxury African Couture & Handcrafted Braided Wigs
+        </p>
+        <p style="color: rgba(255,255,255,0.8); font-size: 0.98rem; margin-bottom: 28px;" id="heroDesc">
+          Discover authentic African heritage infused with contemporary elegance. From bespoke Senator styles to premium micro-twist lace wigs.
+        </p>
+        
+        <div class="hero-actions">
+          <a href="#collections" class="btn-primary">
+            <i class="bi bi-bag-heart"></i> Shop Collections
+          </a>
+          <a href="#lookbook" class="btn-secondary">
+            <i class="bi bi-play-circle"></i> View Runway Lookbook
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">4.9&#9733;</span>
+            <span class="stat-label">Customer Rating</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Handcrafted Quality</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">UK & Global</span>
+            <span class="stat-label">Fast Express Shipping</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Display Card -->
+      <div class="hero-media-card">
+        <div class="hero-image-wrap">
+          <img id="heroImage" src="https://geisoenterprise.co.uk/wp-content/uploads/2024/09/WhatsApp_Image_2024-09-02_at_6.20.21_PM-removebg-preview-300x300.png" alt="Geiso Fashion Showcase" />
+        </div>
+        <div class="hero-floating-pill">
+          <div class="floating-pill-info">
+            <h4 id="pillProductTitle">Aso-Oke Couple Outfit</h4>
+            <p id="pillProductBadge">Yoruba Traditional Wedding Attire</p>
+          </div>
+          <a href="#collections" class="action-btn" style="width: 34px; height: 34px; font-size: 0.9rem; background: var(--gold); color: #000;" aria-label="Explore">
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+        <div class="hero-slider-dots" id="heroDots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Features Bar -->
+  <section class="trust-bar">
+    <div class="container trust-grid">
+      <div class="trust-item">
+        <div class="trust-icon"><i class="bi bi-truck"></i></div>
+        <div class="trust-content">
+          <h4>Free Shipping</h4>
+          <p>Complimentary delivery on all UK orders over &pound;100.</p>
+        </div>
+      </div>
+
+      <div class="trust-item">
+        <div class="trust-icon"><i class="bi bi-shield-check"></i></div>
+        <div class="trust-content">
+          <h4>Certified Authentic</h4>
+          <p>100% authentic African fabrics and master craftsmanship.</p>
+        </div>
+      </div>
+
+      <div class="trust-item">
+        <div class="trust-icon"><i class="bi bi-piggy-bank"></i></div>
+        <div class="trust-content">
+          <h4>Huge Savings</h4>
+          <p>Direct atelier pricing with unbeatable bespoke quality.</p>
+        </div>
+      </div>
+
+      <div class="trust-item">
+        <div class="trust-icon"><i class="bi bi-arrow-repeat"></i></div>
+        <div class="trust-content">
+          <h4>Easy Returns</h4>
+          <p>Hassle-free 14-day exchange and styling support.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lookbook & Runway Ribbon Marquee -->
+  <section class="lookbook-section" id="lookbook">
+    <div class="container section-header-compact">
+      <span class="lookbook-tag">Runway Lookbook</span>
+      <h2 class="lookbook-title">Geiso Enterprise Fashion Showcase</h2>
+    </div>
+
+    <div class="marquee-container">
+      <div class="marquee-track" id="marqueeTrack">
+        <!-- Rendered via JavaScript from GALLERY_IMAGES -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Collections Catalog Section -->
+  <section class="collections-section" id="collections">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-badge">Featured Attire & Wigs</span>
+        <h2 class="section-title">Geiso Enterprise Collections</h2>
+        <p class="section-desc">
+          Explore our premier selection of handcrafted braided wigs, distinguished Men & Boys Senator attire, luxury silk Bubu gowns, and vibrant jackets.
+        </p>
+      </div>
+
+      <!-- Controls: Category Tabs, Search Bar, Sort -->
+      <div class="catalog-controls">
+        <div class="category-tabs" id="categoryTabs">
+          <!-- Rendered via JavaScript -->
+        </div>
+
+        <div class="filter-toolbar">
+          <div class="search-box">
+            <i class="bi bi-search"></i>
+            <input type="text" id="catalogSearch" class="search-input" placeholder="Search by attire name, style, or fabric..." />
+            <button class="search-clear-btn" id="searchClear" aria-label="Clear Search"><i class="bi bi-x-circle-fill"></i></button>
+          </div>
+
+          <div class="toolbar-right">
+            <span class="result-counter" id="resultCounter">Showing all collections</span>
+            <select id="catalogSort" class="sort-select" aria-label="Sort products">
+              <option value="featured">Featured Styles</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="rating">Highest Rated</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="product-grid" id="productGrid">
+        <!-- Dynamically rendered via js/main.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Promotional Voucher Banner -->
+  <section class="promo-banner-section">
+    <div class="container">
+      <div class="promo-card">
+        <div class="promo-content">
+          <span class="section-badge" style="background: rgba(212,175,55,0.25); color: var(--gold-light);">Limited Time Voucher</span>
+          <h3>Get 10 - 15% Off On Your First Purchase!</h3>
+          <p>
+            Upgrade your royal wardrobe with authentic African luxury. Apply your promotional discount voucher at checkout today.
+          </p>
+
+          <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
+            <div class="promo-coupon-box">
+              <span class="coupon-label">Coupon Code:</span>
+              <span class="coupon-code">GEISO15</span>
+              <button class="btn-copy-code" onclick="copyPromoCode()">COPY CODE</button>
+            </div>
+            <a href="#collections" class="btn-primary" style="padding: 10px 24px;">Shop Now</a>
+          </div>
+        </div>
+
+        <div class="promo-media">
+          <img src="https://geisoenterprise.co.uk/wp-content/uploads/2024/08/Polish_20240817_155132643-removebg-preview-1.png" alt="African Male Native Attire" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Testimonials Section -->
+  <section class="testimonials-section" id="reviews">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-badge">Verified Testimonials</span>
+        <h2 class="section-title">What Our Customers Say</h2>
+        <p class="section-desc">
+          Honest feedback from satisfied clients who adore our handcrafted braided wigs and exquisite African attire.
+        </p>
+      </div>
+
+      <div class="testimonials-grid" id="testimonialsGrid">
+        <!-- Rendered via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- About Brand Story Section -->
+  <section class="about-section" id="about">
+    <div class="container about-grid">
+      <div class="about-media">
+        <div class="about-image-collage">
+          <div class="about-img-box" style="height: 380px;">
+            <img src="https://geisoenterprise.co.uk/wp-content/uploads/2024/07/13-x-4-Lace-frontal-cornrows-and-single-box-braids-behind-300x300.jpeg" alt="Geiso Craftsmanship" />
+          </div>
+          <div class="about-img-box" style="height: 380px; margin-top: 30px;">
+            <img src="https://geisoenterprise.co.uk/wp-content/uploads/2024/09/WhatsApp_Image_2024-09-02_at_6.20.21_PM-removebg-preview-300x300.png" alt="Traditional African Wedding Attire" />
+          </div>
+        </div>
+        <div class="about-experience-badge">
+          <strong>100%</strong>
+          <span>Authentic Couture</span>
+        </div>
+      </div>
+
+      <div class="about-content">
+        <span class="section-badge">Our Heritage</span>
+        <h2>Master Artisans of African Elegance</h2>
+        <p>
+          At <strong>GEISO ENTERPRISE</strong>, fashion is more than apparel&mdash;it is a celebration of identity, royal culture, and unparalleled craftsmanship.
+        </p>
+        <p>
+          Each of our braided wigs is meticulously hand-plucked and hand-knotted by expert stylists to provide a natural scalp illusion and lightweight comfort. Our traditional attires&mdash;from Senator sets and Caftans to flowing Bubu dresses and Aso-Oke bridal sets&mdash;are precision-cut using authentic, premium fabrics.
+        </p>
+
+        <div class="about-highlights">
+          <div class="highlight-box">
+            <i class="bi bi-gem"></i>
+            <span>Pure Silk Adire & Aso-Oke</span>
+          </div>
+          <div class="highlight-box">
+            <i class="bi bi-scissors"></i>
+            <span>Bespoke Tailoring & Measurements</span>
+          </div>
+          <div class="highlight-box">
+            <i class="bi bi-stars"></i>
+            <span>Natural Hairline Braided Wigs</span>
+          </div>
+          <div class="highlight-box">
+            <i class="bi bi-globe-americas"></i>
+            <span>Worldwide Shipping from UK</span>
+          </div>
+        </div>
+
+        <a href="#collections" class="btn-primary">Explore Our Full Range</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter VIP Section -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-card">
+        <span class="section-badge">VIP Fashion Club</span>
+        <h3>Join the Geiso Inner Circle</h3>
+        <p>Subscribe for exclusive previews of upcoming drops, bespoke tailoring bookings, and seasonal discount codes.</p>
+        
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" class="newsletter-input" id="newsletterEmail" placeholder="Enter your email address..." required />
+          <button type="submit" class="btn-primary" style="white-space: nowrap;">Join VIP Club</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Slide-Out Shopping Cart Drawer -->
+  <div class="drawer-backdrop" id="cartBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Cart Drawer">
+    <div class="cart-drawer-header">
+      <div class="cart-header-title">
+        <i class="bi bi-bag-check-fill"></i>
+        <span>Shopping Bag (<span id="drawerCartCount">0</span>)</span>
+      </div>
+      <button class="close-cart-btn" onclick="closeCartDrawer()" aria-label="Close Shopping Bag">
+        <i class="bi bi-x-lg"></i>
+      </button>
+    </div>
+
+    <!-- Free Delivery Progress Meter -->
+    <div class="shipping-meter-wrap">
+      <div class="shipping-meter-text" id="shippingMeterText">
+        Add more for <strong>FREE UK Express Delivery</strong>!
+      </div>
+      <div class="meter-progress-track">
+        <div class="meter-progress-bar" id="shippingMeterBar" style="width: 0%;"></div>
+      </div>
+    </div>
+
+    <!-- Items List Body -->
+    <div class="cart-drawer-body" id="cartDrawerItems">
+      <!-- Rendered via JavaScript -->
+    </div>
+
+    <!-- Cart Footer with Totals and Checkout -->
+    <div class="cart-drawer-footer" id="cartFooterActions">
+      <div class="coupon-apply-wrap">
+        <input type="text" class="coupon-input" id="couponInput" placeholder="Promo code (e.g. GEISO15)" />
+        <button class="btn-apply-coupon" onclick="applyCouponCode()">Apply</button>
+      </div>
+
+      <div class="cart-summary-line">
+        <span>Subtotal:</span>
+        <span id="cartSubtotal">&pound;0.00</span>
+      </div>
+      <div class="cart-summary-line" id="cartDiscountRow" style="display: none; color: var(--primary); font-weight: 700;">
+        <span>Promo Discount (15%):</span>
+        <span id="cartDiscount">-&pound;0.00</span>
+      </div>
+      <div class="cart-summary-line">
+        <span>Delivery:</span>
+        <span id="cartShipping">FREE</span>
+      </div>
+      <div class="cart-summary-line total">
+        <span>Total Payable:</span>
+        <span class="total-amount" id="cartGrandTotal">&pound;0.00</span>
+      </div>
+
+      <button class="btn-checkout" onclick="openCheckoutModal()">
+        <i class="bi bi-shield-lock-fill"></i> Proceed to Checkout
+      </button>
+
+      <button class="btn-whatsapp-order" onclick="checkoutViaWhatsApp()">
+        <i class="bi bi-whatsapp"></i> Order via WhatsApp
+      </button>
+    </div>
+  </aside>
+
+  <!-- Quick View Modal Overlay -->
+  <div class="modal-overlay" id="quickViewOverlay"></div>
+
+  <!-- Checkout Order Modal Overlay -->
+  <div class="modal-overlay" id="checkoutOverlay"></div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Main Footer -->
+  <footer class="site-footer" id="contact">
+    <div class="container footer-grid">
+      <!-- About Col -->
+      <div class="footer-col footer-about">
+        <div class="brand-logo" style="margin-bottom: 16px;">
+          <img src="https://geisoenterprise.co.uk/wp-content/uploads/2024/07/FAVICON-150x106.png" alt="GEISO Logo" style="height: 48px; filter: brightness(1.2);" />
+          <div class="brand-text-wrap">
+            <span class="brand-title" style="color: #ffffff;">GEISO ENTERPRISE</span>
+            <span class="brand-tagline">Exquisite Fashion</span>
+          </div>
+        </div>
+        <p>
+          The premier destination for authentic African couture, handcrafted braided wigs, distinguished Senator apparel, and bespoke luxury attire.
+        </p>
+        <div class="footer-social-links">
+          <a href="https://www.facebook.com/" target="_blank" class="social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/" target="_blank" class="social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://wa.me/447404123456" target="_blank" class="social-link" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+          <a href="https://x.com/" target="_blank" class="social-link" aria-label="X Twitter"><i class="bi bi-twitter-x"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul class="footer-nav-list">
+          <li><a href="#">Home</a></li>
+          <li><a href="#collections">All Collections</a></li>
+          <li><a href="#lookbook">Runway Lookbook</a></li>
+          <li><a href="#about">About Geiso</a></li>
+          <li><a href="#reviews">Verified Reviews</a></li>
+          <li><a href="https://webmail.geisoenterprise.co.uk" target="_blank">GEISOMAIL Portal</a></li>
+        </ul>
+      </div>
+
+      <!-- Categories -->
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <ul class="footer-nav-list">
+          <li><a href="#collections" onclick="AppState.activeCategory='Braided Wigs'; renderProducts();">Braided Wigs & Hair</a></li>
+          <li><a href="#collections" onclick="AppState.activeCategory='Men & Boys'; renderProducts();">Men & Boys Senator</a></li>
+          <li><a href="#collections" onclick="AppState.activeCategory='Women & Girls'; renderProducts();">Women & Girls Couture</a></li>
+          <li><a href="#collections" onclick="AppState.activeCategory='Jackets & Outerwear'; renderProducts();">Jackets & Outerwear</a></li>
+          <li><a href="#collections">Custom Wedding Attires</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-col">
+        <h4>Contact & Orders</h4>
+        <div class="footer-contact-item">
+          <i class="bi bi-geo-alt"></i>
+          <span>United Kingdom &bull; Worldwide Delivery</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="bi bi-whatsapp"></i>
+          <span>+44 7404 123456 (Orders & Custom Sizing)</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="bi bi-envelope"></i>
+          <span>info@geisoenterprise.co.uk</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="bi bi-clock"></i>
+          <span>Mon - Sat: 9:00 AM - 7:00 PM GMT</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Bar with CCYI Attribution -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <div>
+          &copy; 2026 GEISO ENTERPRISE. Designed and Developed by 
+          <a href="#" class="developer-attribution">CCYI GLOBAL ENTERPRISE</a>. All Rights Reserved.
+        </div>
+        <div class="payment-badges" title="Accepted Payment Methods">
+          <i class="bi bi-credit-card-2-front"></i>
+          <i class="bi bi-paypal"></i>
+          <i class="bi bi-shield-check"></i>
+          <i class="bi bi-lock-fill"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
